@@ -7,4 +7,6 @@ class MessagesConstant {
     static let secondMainTabTitle = "Competitions"
     static let systemballImage = "soccerball"
     static let soccerFieldImage = "soccer-field"
+    
+    static let compViewCellID = "CompetitionsListCell"
 }

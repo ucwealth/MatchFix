@@ -1,24 +1,31 @@
 //  Created on 10/05/2023
 
 import UIKit
+import SwiftUI
 
 class CompetitionsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
+
+//// MARK: SwiftUI Preview
+//#if DEBUG
+//struct CompetitionsViewControllerContainerView: UIViewControllerRepresentable {
+//    typealias UIViewControllerType = CompetitionsViewController
+//
+//    func makeUIViewController(context: Context) -> UIViewControllerType {
+//        return CompetitionsViewController()
+//    }
+//    
+//    func updateUIViewController(_ uiViewController: UIViewControllerType, context: Context) {}
+//}
+//
+//struct ContentViewController_Previews: PreviewProvider {
+//    static var previews: some View {
+//        CompetitionsViewControllerContainerView().colorScheme(.light) // or .dark
+//    }
+//}
+//#endif
