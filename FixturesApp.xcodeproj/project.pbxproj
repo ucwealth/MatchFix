@@ -19,6 +19,7 @@
 		E4D605912A0C38F70050457B /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D605902A0C38F70050457B /* MainTabBarController.swift */; };
 		E4D605932A0C3D9F0050457B /* TodayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D605922A0C3D9F0050457B /* TodayView.swift */; };
 		E4D605952A0C41210050457B /* CompetitionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D605942A0C41210050457B /* CompetitionsView.swift */; };
+		E4D605982A0C505C0050457B /* MessagesConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D605972A0C505C0050457B /* MessagesConstant.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		E4D605902A0C38F70050457B /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		E4D605922A0C3D9F0050457B /* TodayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayView.swift; sourceTree = "<group>"; };
 		E4D605942A0C41210050457B /* CompetitionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompetitionsView.swift; sourceTree = "<group>"; };
+		E4D605972A0C505C0050457B /* MessagesConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesConstant.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 		E4D605562A0C24CB0050457B /* FixturesApp */ = {
 			isa = PBXGroup;
 			children = (
+				E4D605962A0C50310050457B /* Utils */,
 				E4D605872A0C27360050457B /* View */,
 				E4D605892A0C275F0050457B /* Resources */,
 				E4D605652A0C24CD0050457B /* Info.plist */,
@@ -166,6 +169,14 @@
 				E4D605942A0C41210050457B /* CompetitionsView.swift */,
 			);
 			path = UI;
+			sourceTree = "<group>";
+		};
+		E4D605962A0C50310050457B /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				E4D605972A0C505C0050457B /* MessagesConstant.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -301,6 +312,7 @@
 				E4D6058C2A0C30090050457B /* TodayViewController.swift in Sources */,
 				E4D6058E2A0C30490050457B /* CompetitionsViewController.swift in Sources */,
 				E4D605952A0C41210050457B /* CompetitionsView.swift in Sources */,
+				E4D605982A0C505C0050457B /* MessagesConstant.swift in Sources */,
 				E4D605912A0C38F70050457B /* MainTabBarController.swift in Sources */,
 				E4D605932A0C3D9F0050457B /* TodayView.swift in Sources */,
 				E4D605582A0C24CB0050457B /* AppDelegate.swift in Sources */,
