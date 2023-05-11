@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E436984E2A0C676F0018FA6E /* Extension+NSLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = E436984D2A0C676F0018FA6E /* Extension+NSLayout.swift */; };
 		E4D605582A0C24CB0050457B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D605572A0C24CB0050457B /* AppDelegate.swift */; };
 		E4D6055A2A0C24CB0050457B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D605592A0C24CB0050457B /* SceneDelegate.swift */; };
 		E4D605612A0C24CD0050457B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4D605602A0C24CD0050457B /* Assets.xcassets */; };
@@ -40,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E436984D2A0C676F0018FA6E /* Extension+NSLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+NSLayout.swift"; sourceTree = "<group>"; };
 		E4D605542A0C24CB0050457B /* FixturesApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FixturesApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4D605572A0C24CB0050457B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E4D605592A0C24CB0050457B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -175,6 +177,7 @@
 			isa = PBXGroup;
 			children = (
 				E4D605972A0C505C0050457B /* MessagesConstant.swift */,
+				E436984D2A0C676F0018FA6E /* Extension+NSLayout.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -311,6 +314,7 @@
 			files = (
 				E4D6058C2A0C30090050457B /* TodayViewController.swift in Sources */,
 				E4D6058E2A0C30490050457B /* CompetitionsViewController.swift in Sources */,
+				E436984E2A0C676F0018FA6E /* Extension+NSLayout.swift in Sources */,
 				E4D605952A0C41210050457B /* CompetitionsView.swift in Sources */,
 				E4D605982A0C505C0050457B /* MessagesConstant.swift in Sources */,
 				E4D605912A0C38F70050457B /* MainTabBarController.swift in Sources */,

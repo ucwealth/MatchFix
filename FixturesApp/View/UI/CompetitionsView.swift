@@ -17,11 +17,11 @@ class CompetitionsView: UIView, UITableViewDataSource, UITableViewDelegate {
     }
     
     func configure() {
-       addSubview(tableView)
+        addSubview(tableView, anchors: [.leading(0), .trailing(0), .bottom(0), .top(0)])
         tableView.delegate = self
         tableView.dataSource = self
+//        tableView.backgroundColor = .red
         tableView.register(CompetitionsListCell.self, forCellReuseIdentifier: MessagesConstant.compViewCellID)
-        tableView.translatesAutoresizingMaskIntoConstraints = false 
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -34,37 +34,31 @@ class CompetitionsView: UIView, UITableViewDataSource, UITableViewDelegate {
         }
         return cell
     }
-    
-    func setupSubviews() {
-        NSLayoutConstraint.activate([
-            
-        ])
-    }
 
 }
 
 class CompetitionsListCell: UITableViewCell {
     
 }
-
-#if DEBUG
-struct CompetitionsViewContainer: UIViewRepresentable {
-    typealias UIViewType = CompetitionsView
-
-    func makeUIView(context: Context) -> UIViewType {
-        return CompetitionsView(frame: .zero)
-    }
-
-    func updateUIView(_ uiView: CompetitionsView, context: Context) {}
-}
-
-struct CompetitionsViewContainer_Previews: PreviewProvider {
-    static var previews: some View {
-        CompetitionsViewContainer().preferredColorScheme(.light)
-//        Group {
-//            BackgroundViewContainer().colorScheme(.light)
-//            BackgroundViewContainer().colorScheme(.dark)
-//        }.previewLayout(.fixed(width: 200, height: 200))
-    }
-}
-#endif
+//
+//#if DEBUG
+//struct CompetitionsViewContainer: UIViewRepresentable {
+//    typealias UIViewType = CompetitionsView
+//
+//    func makeUIView(context: Context) -> UIViewType {
+//        return CompetitionsView(frame: .zero)
+//    }
+//
+//    func updateUIView(_ uiView: CompetitionsView, context: Context) {}
+//}
+//
+//struct CompetitionsViewContainer_Previews: PreviewProvider {
+//    static var previews: some View {
+//        CompetitionsViewContainer().preferredColorScheme(.light)
+////        Group {
+////            BackgroundViewContainer().colorScheme(.light)
+////            BackgroundViewContainer().colorScheme(.dark)
+////        }.previewLayout(.fixed(width: 200, height: 200))
+//    }
+//}
+//#endif
