@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E41AE7AA2A0E9C960036244A /* Constraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41AE7A92A0E9C960036244A /* Constraint.swift */; };
+		E41AE7AC2A0E9FAC0036244A /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41AE7AB2A0E9FAC0036244A /* BaseView.swift */; };
+		E41AE7AE2A0EA2680036244A /* TableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41AE7AD2A0EA2680036244A /* TableViewDataSource.swift */; };
+		E41AE7B02A0EA6580036244A /* Competition.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41AE7AF2A0EA6580036244A /* Competition.swift */; };
+		E41AE7B32A0EB12B0036244A /* Table.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41AE7B22A0EB12B0036244A /* Table.swift */; };
+		E41AE7B52A0EC6BA0036244A /* Teams.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41AE7B42A0EC6BA0036244A /* Teams.swift */; };
+		E41AE7B82A0EE6DA0036244A /* CompetitionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41AE7B72A0EE6DA0036244A /* CompetitionsViewModel.swift */; };
 		E436984E2A0C676F0018FA6E /* Extension+NSLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = E436984D2A0C676F0018FA6E /* Extension+NSLayout.swift */; };
 		E4D605582A0C24CB0050457B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D605572A0C24CB0050457B /* AppDelegate.swift */; };
 		E4D6055A2A0C24CB0050457B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D605592A0C24CB0050457B /* SceneDelegate.swift */; };
@@ -41,6 +48,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E41AE7A92A0E9C960036244A /* Constraint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constraint.swift; sourceTree = "<group>"; };
+		E41AE7AB2A0E9FAC0036244A /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		E41AE7AD2A0EA2680036244A /* TableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewDataSource.swift; sourceTree = "<group>"; };
+		E41AE7AF2A0EA6580036244A /* Competition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Competition.swift; sourceTree = "<group>"; };
+		E41AE7B22A0EB12B0036244A /* Table.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Table.swift; sourceTree = "<group>"; };
+		E41AE7B42A0EC6BA0036244A /* Teams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Teams.swift; sourceTree = "<group>"; };
+		E41AE7B72A0EE6DA0036244A /* CompetitionsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompetitionsViewModel.swift; sourceTree = "<group>"; };
 		E436984D2A0C676F0018FA6E /* Extension+NSLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+NSLayout.swift"; sourceTree = "<group>"; };
 		E4D605542A0C24CB0050457B /* FixturesApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FixturesApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4D605572A0C24CB0050457B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -86,6 +100,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E41AE7A42A0E97EB0036244A /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				E41AE7AB2A0E9FAC0036244A /* BaseView.swift */,
+				E41AE7AD2A0EA2680036244A /* TableViewDataSource.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		E41AE7B12A0EB11C0036244A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E41AE7AF2A0EA6580036244A /* Competition.swift */,
+				E41AE7B22A0EB12B0036244A /* Table.swift */,
+				E41AE7B42A0EC6BA0036244A /* Teams.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E41AE7B62A0EE6BE0036244A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				E41AE7B72A0EE6DA0036244A /* CompetitionsViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		E4D6054B2A0C24CB0050457B = {
 			isa = PBXGroup;
 			children = (
@@ -109,10 +150,13 @@
 		E4D605562A0C24CB0050457B /* FixturesApp */ = {
 			isa = PBXGroup;
 			children = (
+				E41AE7B62A0EE6BE0036244A /* ViewModel */,
+				E41AE7A42A0E97EB0036244A /* Helpers */,
 				E4D605962A0C50310050457B /* Utils */,
 				E4D605872A0C27360050457B /* View */,
 				E4D605892A0C275F0050457B /* Resources */,
 				E4D605652A0C24CD0050457B /* Info.plist */,
+				E41AE7B12A0EB11C0036244A /* Model */,
 			);
 			path = FixturesApp;
 			sourceTree = "<group>";
@@ -178,6 +222,7 @@
 			children = (
 				E4D605972A0C505C0050457B /* MessagesConstant.swift */,
 				E436984D2A0C676F0018FA6E /* Extension+NSLayout.swift */,
+				E41AE7A92A0E9C960036244A /* Constraint.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -312,14 +357,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E41AE7AA2A0E9C960036244A /* Constraint.swift in Sources */,
+				E41AE7B02A0EA6580036244A /* Competition.swift in Sources */,
+				E41AE7AC2A0E9FAC0036244A /* BaseView.swift in Sources */,
 				E4D6058C2A0C30090050457B /* TodayViewController.swift in Sources */,
 				E4D6058E2A0C30490050457B /* CompetitionsViewController.swift in Sources */,
 				E436984E2A0C676F0018FA6E /* Extension+NSLayout.swift in Sources */,
+				E41AE7B82A0EE6DA0036244A /* CompetitionsViewModel.swift in Sources */,
 				E4D605952A0C41210050457B /* CompetitionsView.swift in Sources */,
 				E4D605982A0C505C0050457B /* MessagesConstant.swift in Sources */,
 				E4D605912A0C38F70050457B /* MainTabBarController.swift in Sources */,
 				E4D605932A0C3D9F0050457B /* TodayView.swift in Sources */,
 				E4D605582A0C24CB0050457B /* AppDelegate.swift in Sources */,
+				E41AE7AE2A0EA2680036244A /* TableViewDataSource.swift in Sources */,
+				E41AE7B32A0EB12B0036244A /* Table.swift in Sources */,
+				E41AE7B52A0EC6BA0036244A /* Teams.swift in Sources */,
 				E4D6055A2A0C24CB0050457B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
