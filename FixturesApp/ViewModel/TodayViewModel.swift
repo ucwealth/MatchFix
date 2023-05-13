@@ -7,7 +7,7 @@ class TodayViewModel {
     let service = NetworkService()
     
     var status: String {
-        return today?.status ?? "00:00"
+        return today?.minute ?? "00:00"
     }
     
     init(today: Match? = nil) {

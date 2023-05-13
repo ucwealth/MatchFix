@@ -22,9 +22,15 @@ class NetworkService {
         
         URLSession.shared.dataTask(with: request) { (data, response, error) in
             guard let data = data, error == nil else {
-                completion(.failure(error))
+                completion(.failure(error!))
                 return
             }
+            
+            if let error = error {
+                   completion(.failure(error))
+                   return
+            }
+            
             do {
                 let response = try JSONDecoder().decode(T.self, from: data)
                 completion(.success(response))

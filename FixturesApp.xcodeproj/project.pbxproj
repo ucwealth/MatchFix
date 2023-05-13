@@ -21,6 +21,11 @@
 		E41AE7C22A0F92250036244A /* Extension+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41AE7C12A0F92250036244A /* Extension+UIView.swift */; };
 		E41AE7C42A0F92EC0036244A /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41AE7C32A0F92EC0036244A /* Utility.swift */; };
 		E41AE7C82A0FA5A20036244A /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41AE7C72A0FA5A20036244A /* NetworkService.swift */; };
+		E41AE7CD2A1010010036244A /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = E41AE7CC2A1010010036244A /* Realm */; };
+		E41AE7CF2A1010010036244A /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = E41AE7CE2A1010010036244A /* RealmSwift */; };
+		E41AE7D12A1034630036244A /* CompDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41AE7D02A1034630036244A /* CompDetailViewController.swift */; };
+		E41AE7D32A1034B80036244A /* CompDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41AE7D22A1034B80036244A /* CompDetailView.swift */; };
+		E41AE7D52A1035B00036244A /* CompetitionsListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41AE7D42A1035B00036244A /* CompetitionsListCell.swift */; };
 		E436984E2A0C676F0018FA6E /* Extension+NSLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = E436984D2A0C676F0018FA6E /* Extension+NSLayout.swift */; };
 		E4D605582A0C24CB0050457B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D605572A0C24CB0050457B /* AppDelegate.swift */; };
 		E4D6055A2A0C24CB0050457B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D605592A0C24CB0050457B /* SceneDelegate.swift */; };
@@ -69,6 +74,9 @@
 		E41AE7C12A0F92250036244A /* Extension+UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UIView.swift"; sourceTree = "<group>"; };
 		E41AE7C32A0F92EC0036244A /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
 		E41AE7C72A0FA5A20036244A /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		E41AE7D02A1034630036244A /* CompDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompDetailViewController.swift; sourceTree = "<group>"; };
+		E41AE7D22A1034B80036244A /* CompDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompDetailView.swift; sourceTree = "<group>"; };
+		E41AE7D42A1035B00036244A /* CompetitionsListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompetitionsListCell.swift; sourceTree = "<group>"; };
 		E436984D2A0C676F0018FA6E /* Extension+NSLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+NSLayout.swift"; sourceTree = "<group>"; };
 		E4D605542A0C24CB0050457B /* FixturesApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FixturesApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4D605572A0C24CB0050457B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -94,6 +102,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E41AE7CF2A1010010036244A /* RealmSwift in Frameworks */,
+				E41AE7CD2A1010010036244A /* Realm in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -159,6 +169,23 @@
 				E41AE7C72A0FA5A20036244A /* NetworkService.swift */,
 			);
 			path = Manager;
+			sourceTree = "<group>";
+		};
+		E41AE7D62A1035DC0036244A /* Competitions */ = {
+			isa = PBXGroup;
+			children = (
+				E4D605942A0C41210050457B /* CompetitionsView.swift */,
+				E41AE7D42A1035B00036244A /* CompetitionsListCell.swift */,
+			);
+			path = Competitions;
+			sourceTree = "<group>";
+		};
+		E41AE7D72A1035F80036244A /* CompDetail */ = {
+			isa = PBXGroup;
+			children = (
+				E41AE7D22A1034B80036244A /* CompDetailView.swift */,
+			);
+			path = CompDetail;
 			sourceTree = "<group>";
 		};
 		E4D6054B2A0C24CB0050457B = {
@@ -239,6 +266,7 @@
 				E4D6058B2A0C30090050457B /* TodayViewController.swift */,
 				E4D6058D2A0C30490050457B /* CompetitionsViewController.swift */,
 				E4D605902A0C38F70050457B /* MainTabBarController.swift */,
+				E41AE7D02A1034630036244A /* CompDetailViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -247,7 +275,8 @@
 			isa = PBXGroup;
 			children = (
 				E41AE7C52A0F9FA70036244A /* Today */,
-				E4D605942A0C41210050457B /* CompetitionsView.swift */,
+				E41AE7D62A1035DC0036244A /* Competitions */,
+				E41AE7D72A1035F80036244A /* CompDetail */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -280,6 +309,10 @@
 			dependencies = (
 			);
 			name = FixturesApp;
+			packageProductDependencies = (
+				E41AE7CC2A1010010036244A /* Realm */,
+				E41AE7CE2A1010010036244A /* RealmSwift */,
+			);
 			productName = FixturesApp;
 			productReference = E4D605542A0C24CB0050457B /* FixturesApp.app */;
 			productType = "com.apple.product-type.application";
@@ -352,6 +385,9 @@
 				Base,
 			);
 			mainGroup = E4D6054B2A0C24CB0050457B;
+			packageReferences = (
+				E41AE7CB2A1010000036244A /* XCRemoteSwiftPackageReference "realm-swift" */,
+			);
 			productRefGroup = E4D605552A0C24CB0050457B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -396,14 +432,17 @@
 			files = (
 				E41AE7C82A0FA5A20036244A /* NetworkService.swift in Sources */,
 				E41AE7AA2A0E9C960036244A /* Constraint.swift in Sources */,
+				E41AE7D12A1034630036244A /* CompDetailViewController.swift in Sources */,
 				E41AE7B02A0EA6580036244A /* Competition.swift in Sources */,
 				E41AE7AC2A0E9FAC0036244A /* BaseView.swift in Sources */,
+				E41AE7D52A1035B00036244A /* CompetitionsListCell.swift in Sources */,
 				E4D6058C2A0C30090050457B /* TodayViewController.swift in Sources */,
 				E4D6058E2A0C30490050457B /* CompetitionsViewController.swift in Sources */,
 				E436984E2A0C676F0018FA6E /* Extension+NSLayout.swift in Sources */,
 				E41AE7B82A0EE6DA0036244A /* CompetitionsViewModel.swift in Sources */,
 				E4D605952A0C41210050457B /* CompetitionsView.swift in Sources */,
 				E41AE7BC2A0F03550036244A /* TodayViewModel.swift in Sources */,
+				E41AE7D32A1034B80036244A /* CompDetailView.swift in Sources */,
 				E41AE7BE2A0F8C0F0036244A /* BaseTableCell.swift in Sources */,
 				E4D605982A0C505C0050457B /* MessagesConstant.swift in Sources */,
 				E41AE7BA2A0EFCD50036244A /* Today.swift in Sources */,
@@ -748,6 +787,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E41AE7CB2A1010000036244A /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.39.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E41AE7CC2A1010010036244A /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E41AE7CB2A1010000036244A /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = Realm;
+		};
+		E41AE7CE2A1010010036244A /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E41AE7CB2A1010000036244A /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E4D6054C2A0C24CB0050457B /* Project object */;
 }

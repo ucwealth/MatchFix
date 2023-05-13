@@ -5,10 +5,10 @@ import SwiftUI
 
 
 class TodayViewController: UIViewController {
-
+    let viewModel = TodayViewModel()
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        viewModel.fetchData()
     }
     
     override func loadView() {

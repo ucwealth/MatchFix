@@ -7,12 +7,13 @@ class TodayView: BaseView {
 
     var tableView = UITableView()
     var dataSource: TableViewDataSource<TodayViewModel>?
-    var viewModelArr = [
-        TodayViewModel(today: Match(id: 1, status: "13:00")),
-        TodayViewModel(today: Match(id: 1, status: "16:00")),
-        TodayViewModel(today: Match(id: 1, status: "18:30")),
-        TodayViewModel(today: Match(id: 1, status: "20:45"))
-    ]
+    var viewModelArr = [TodayViewModel]()
+//    var viewModelArr = [
+//        TodayViewModel(today: Match(id: 1, status: "13:00")),
+//        TodayViewModel(today: Match(id: 1, status: "16:00")),
+//        TodayViewModel(today: Match(id: 1, status: "18:30")),
+//        TodayViewModel(today: Match(id: 1, status: "20:45"))
+//    ]
     
     override func setupView() {
         addSubview(tableView, anchors: [.leading(0), .trailing(0), .bottom(0), .top(0)])
