@@ -18,14 +18,17 @@ struct Filters1: Codable {
 
 // MARK: - Match
 struct Match: Codable {
-    let season: Season
+//    let season: Season
     let id: Int
-    let utcDate: Date
-    let status, minute: String
-    let matchday: Int
-    let lastUpdated: Date
-    let homeTeam, awayTeam: Team1
-    let score: Score
+//    let utcDate: Date
+    
+    let status: String
+    
+//    let minute: String
+//    let matchday: Int
+//    let lastUpdated: Date
+//    let homeTeam, awayTeam: Team1
+//    let score: Score
 }
 
 // MARK: - Team

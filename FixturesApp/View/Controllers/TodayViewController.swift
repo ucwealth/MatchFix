@@ -10,6 +10,10 @@ class TodayViewController: UIViewController {
         super.viewDidLoad()
 
     }
+    
+    override func loadView() {
+        view = TodayView()
+    }
 
 }
 //
