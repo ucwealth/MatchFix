@@ -4,7 +4,6 @@ import Foundation
 
 class TodayViewModel {
     private var today: Match?
-    let service = NetworkService()
     
     var status: String {
         return today?.minute ?? "00:00"
@@ -18,7 +17,7 @@ class TodayViewModel {
         guard let url = URL(string: "\(MessagesConstant.BASE_URL)/matches") else {
             return
         }
-        service.makeRequest(with: url, responseType: TodayMatch.self) { result in
+        NetworkService.shared.makeRequest(with: url, responseType: TodayMatch.self) { result in
             switch result {
             case .success(let data):
                 // Do something with the data

@@ -2,16 +2,25 @@
 
 import UIKit
 
-class CompetitionsViewController: UIViewController {
+class CompetitionsViewController: UIViewController, CompetitionsViewModelDelegate {
+    
+    let competitionView = CompetitionsView()
     let viewModel = CompetitionsViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        viewModel.fetchData()
+        viewModel.fetchData()
+        viewModel.delegate = self 
     }
 
     override func loadView() {
-        view = CompetitionsView()
+        view = competitionView
+    }
+    
+    func didUpdateData() {
+        DispatchQueue.main.async {[weak self] in
+            self?.competitionView.comp = self?.viewModel.competitions
+            self?.competitionView.tableView.reloadData()        }
     }
     
 }

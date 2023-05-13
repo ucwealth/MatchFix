@@ -3,6 +3,7 @@
 import Foundation
 
 class NetworkService {
+    static let shared = NetworkService()
     
     enum HTTPMethod: String {
         case get = "GET"

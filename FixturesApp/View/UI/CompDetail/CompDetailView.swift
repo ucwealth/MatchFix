@@ -8,6 +8,6 @@ class CompDetailView: BaseView {
         
     }
     
-    // top tab with 3 tabs - 
+    // top tab with 3 tabs - Table, Fixtures, Teams 
 
 }

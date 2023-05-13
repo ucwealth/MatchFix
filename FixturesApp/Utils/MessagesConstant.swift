@@ -12,6 +12,8 @@ class MessagesConstant {
     
     static let compViewCellID = "CompetitionsListCell"
     static let todayCellID = "TodayListCell"
+    static let leagueTableCellID = "LeagueTableCell"
+    
     static let requiredInitMsg = "init(coder:) has not been implemented"
     static let API_TOKEN = "a44cf9f55f2448cd93b8b87fe4941ede" // Move to Keychain
 }

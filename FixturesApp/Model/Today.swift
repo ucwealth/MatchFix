@@ -5,7 +5,6 @@ import Foundation
 // MARK: - TodayMatch
 struct TodayMatch: Codable {
     let matches: [Match]
-    // 2 team labels, match time, 2 labels for each score, md39 label - competition code, minute - 00' label
 }
 
 // MARK: - Match

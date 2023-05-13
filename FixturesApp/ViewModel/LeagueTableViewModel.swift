@@ -1,12 +1,11 @@
-//  Created on 12/05/2023
-
+//  Created on 13/05/2023
 import Foundation
 
-protocol CompetitionsViewModelDelegate: AnyObject {
+protocol LeagueTableViewModelDelegate: AnyObject {
     func didUpdateData()
 }
 
-class CompetitionsViewModel {
+class LeagueTableViewModel {
     var competitions: [Competition]?
     weak var delegate: CompetitionsViewModelDelegate?
         
@@ -17,7 +16,7 @@ class CompetitionsViewModel {
     
     // Fetch Competitions from API Endpoint
     func fetchData() {
-        guard let url = URL(string: "\(MessagesConstant.BASE_URL)/competitions") else {
+        guard let url = URL(string: "\(MessagesConstant.BASE_URL)/competitions/PL/standings") else {
             return
         }
         // add activity indicator

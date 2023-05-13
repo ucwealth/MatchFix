@@ -1,21 +1,10 @@
 //  Created on 12/05/2023
 
 import Foundation
-// To parse the JSON, add this file to your project and do:
-//   let table = try? JSONDecoder().decode(Table.self, from: jsonData)
-
-// GET http://api.football-data.org/v4/competitions/PL/standings
 
 // MARK: - Table
-struct Standings: Codable {
-    let filters: Filters2
+struct LeagueListStanding: Codable {
     let standings: [Standing]
-}
-
-
-// MARK: - Filters
-struct Filters2: Codable {
-    let season: String
 }
 
 // MARK: - Standing
@@ -36,4 +25,3 @@ struct Team: Codable {
     let name, shortName: String
     let crest: String
 }
-
