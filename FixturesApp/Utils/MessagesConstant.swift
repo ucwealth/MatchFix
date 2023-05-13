@@ -11,4 +11,5 @@ class MessagesConstant {
     static let soccerFieldImage = "soccer-field"
     
     static let compViewCellID = "CompetitionsListCell"
+    static let requiredInitMsg = "init(coder:) has not been implemented"
 }
