@@ -16,24 +16,18 @@ class TeamsViewModel {
     // Only make network call when a collection view cell is clicked
     func fetchTeams() {
         teamsList = [
-            Team(id: 1, name: "Manchester United", crest: ""),
-            Team(id: 2, name: "Manchester United", crest: ""),
-            Team(id: 3, name: "Manchester United", crest: ""),
-            Team(id: 4, name: "Manchester United", crest: ""),
-            Team(id: 5, name: "Manchester United", crest: ""),
-            Team(id: 6, name: "Manchester United", crest: ""),
-            Team(id: 7, name: "Manchester United", crest: ""),
-            Team(id: 8, name: "Manchester United", crest: ""),
-            Team(id: 9, name: "Manchester United", crest: ""),
+            Team(id: 1, name: "Manchester United", crest: MessagesConstant.systemballImage),
+            Team(id: 2, name: "Manchester United", crest: MessagesConstant.systemballImage),
+            Team(id: 3, name: "Manchester United", crest: MessagesConstant.systemballImage),
+            Team(id: 4, name: "Manchester United", crest: MessagesConstant.systemballImage),
+            Team(id: 5, name: "Manchester United", crest: MessagesConstant.systemballImage),
+            Team(id: 6, name: "Manchester United", crest: MessagesConstant.systemballImage),
+            Team(id: 7, name: "Manchester United", crest: MessagesConstant.systemballImage),
+            Team(id: 8, name: "Manchester United", crest: MessagesConstant.systemballImage),
+            Team(id: 9, name: "Manchester United", crest: MessagesConstant.systemballImage),
 
         ]
         // get from db
-//        if let teams = UserDefaults.standard.array(forKey: "teams") {
-//            for team in teams as! [Team]  {
-//                teamsList.append(team)
-//                print("teamsList", teamsList)
-//            }
-//        }
 
     }
     
