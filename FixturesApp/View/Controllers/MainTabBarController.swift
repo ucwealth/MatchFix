@@ -24,8 +24,13 @@ class MainTabBarController: UITabBarController {
     
     func setupVCs() {
           viewControllers = [
-            createNavController(for: TodayViewController(), title: MessagesConstant.firstMainTabTitle, image: UIImage(systemName: MessagesConstant.systemballImage)!),
-            createNavController(for: CompetitionsViewController(), title: MessagesConstant.secondMainTabTitle, image: UIImage(named: MessagesConstant.soccerFieldImage)!),
+            createNavController(for: TodayViewController(),
+                                title: MessagesConstant.firstMainTabTitle,
+                                image: UIImage(systemName: MessagesConstant.systemballImage)!),
+            createNavController(for: CompetitionsViewController(),
+                                title: MessagesConstant.secondMainTabTitle,
+                                image: UIImage(systemName: "sportscourt")!)
+            
           ]
     }
 

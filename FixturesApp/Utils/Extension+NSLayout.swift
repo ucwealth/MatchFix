@@ -55,7 +55,9 @@ extension LayoutAnchor {
         multiplier: CGFloat = 1
     ) -> (CGFloat) -> LayoutAnchor {
         return { constant in
-            .relative(attribute: attribute, relation: relation, relatedTo: relatedTo, multiplier: multiplier, constant: constant)
+            .relative(attribute: attribute, relation: relation,
+                      relatedTo: relatedTo, multiplier: multiplier,
+                      constant: constant)
         }
     }
     
@@ -77,7 +79,9 @@ extension LayoutAnchor {
 extension NSLayoutConstraint {
     convenience init(from: UIView, to item: UIView?, anchor: LayoutAnchor) {
         switch anchor {
-        case let .constant(attribute: attr, relation: relation, constant: constant):
+        case let .constant(attribute: attr,
+                           relation: relation,
+                           constant: constant):
             self.init(
                 item: from,
                 attribute: attr,

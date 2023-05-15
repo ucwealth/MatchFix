@@ -1,15 +1,14 @@
 //  Created on 12/05/2023
 
 import Foundation
-//   let aTeam = try? JSONDecoder().decode(ATeam.self, from: jsonData)
 
-// MARK: - ATeam
-struct ATeam: Codable {
+// MARK: - Team
+struct TeamSquad: Codable {
     let id: Int
-    let name, shortName, tla: String
+    let name: String
     let crest: String
     let squad: [Squad]
-    let lastUpdated: Date
+//    let lastUpdated: Date
 }
 
 // MARK: - Squad
@@ -49,7 +48,3 @@ class JSONCodingKey: CodingKey {
         return key
     }
 }
-
-
-// Show 1 particular team
-// GET http://api.football-data.org/v4/teams/{id}

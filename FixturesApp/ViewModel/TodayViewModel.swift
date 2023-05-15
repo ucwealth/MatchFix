@@ -2,26 +2,29 @@
 
 import Foundation
 
+protocol TodayViewModelDelegate: AnyObject {
+    func didUpdateData()
+}
+
 class TodayViewModel {
-    private var today: Match?
-    
-    var status: String {
-        return today?.minute ?? "00:00"
-    }
-    
-    init(today: Match? = nil) {
-        self.today = today
-    }
-        
+    var todayList = [Match]()
+    weak var delegate: TodayViewModelDelegate?
+
     func fetchData() {
-        guard let url = URL(string: "\(MessagesConstant.BASE_URL)/matches") else {
+
+        guard let url = URL(string: "\(MessagesConstant.BASE_URL)/matches?date=TODAY") else {
             return
         }
-        NetworkService.shared.makeRequest(with: url, responseType: TodayMatch.self) { result in
+        // add activity indicator
+        NetworkService.shared.makeRequest(with: url, responseType: TodayMatch.self) {[weak self] result in
             switch result {
             case .success(let data):
                 // Do something with the data
-                print("TodayViewModel network data", data)
+//                print("TodayViewModel network data", data)
+                self?.todayList = data.matches
+                
+                // reload Table
+                self?.delegate?.didUpdateData()
             case .failure(let error):
                 // Handle the error
                 print("TodayViewModel network error", error)

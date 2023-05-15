@@ -3,8 +3,8 @@
 import UIKit
 
 class BaseTableCell: UITableViewCell {
-    // MARK: - Initialization
     
+    // MARK: - Initialization
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         setupViews()

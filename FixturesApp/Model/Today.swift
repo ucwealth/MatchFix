@@ -2,33 +2,46 @@
 
 import Foundation
 
-// MARK: - TodayMatch
+// MARK: - Today
 struct TodayMatch: Codable {
+    let filters: Filters
     let matches: [Match]
+}
+
+// MARK: - Filters
+struct Filters: Codable {
+    let dateFrom, dateTo: String
+    let permission: String?
 }
 
 // MARK: - Match
 struct Match: Codable {
     let id: Int
-    let utcDate: Date
-    let minute: String
+    let utcDate: String
+    let status: String
     let matchday: Int
-    let homeTeam, awayTeam: Team1
+    let homeTeam: HomeTeam
+    let awayTeam: AwayTeam
     let score: Score
-}
-
-// MARK: - Team
-struct Team1: Codable {
-    let id: Int
-    let name: String
-}
-
-// MARK: - FullTime
-struct FullTime: Codable {
-    let home, away: Int
 }
 
 // MARK: - Score
 struct Score: Codable {
-    let fullTime: FullTime
+    let fullTime: Time
 }
+
+struct HomeTeam: Codable {
+    let id: Int
+    let name: String
+}
+
+struct AwayTeam: Codable {
+    let id: Int
+    let name: String
+}
+
+// MARK: - Time
+struct Time: Codable {
+    let home, away: Int?
+}
+

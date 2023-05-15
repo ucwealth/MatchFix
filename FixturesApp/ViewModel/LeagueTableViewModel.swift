@@ -6,30 +6,27 @@ protocol LeagueTableViewModelDelegate: AnyObject {
 }
 
 class LeagueTableViewModel {
-    var competitions: [Competition]?
-    weak var delegate: CompetitionsViewModelDelegate?
+    var table: [Table]?
+    weak var delegate: LeagueTableViewModelDelegate?
         
-    init(competitions: [Competition]? = nil, delegate: CompetitionsViewModelDelegate? = nil) {
-        self.competitions = competitions
+    init(table: [Table]? = nil, delegate: LeagueTableViewModelDelegate? = nil) {
+        self.table = table
         self.delegate = delegate
     }
     
-    // Fetch Competitions from API Endpoint
-    func fetchData() {
-        guard let url = URL(string: "\(MessagesConstant.BASE_URL)/competitions/PL/standings") else {
+    func fetchData(competitionID: Int) {
+        guard let url = URL(string: "\(MessagesConstant.BASE_URL)/competitions/\(competitionID)/standings") else {
             return
         }
         // add activity indicator
-        NetworkService.shared.makeRequest(with: url, responseType: CompetitionsModel.self) { [weak self] result in
+        NetworkService.shared.makeRequest(with: url, responseType: LeagueTableModel.self) { [weak self] result in
             switch result {
             case .success(let data):
-                self?.competitions = data.competitions
-                // reload table
+                self?.table = data.standings[0].table
                 self?.delegate?.didUpdateData()
 
             case .failure(let error):
-                // Handle the error
-                print("CompetitionsViewModel network error", error)
+                print("LeagueTableViewModel network error", error)
             }
         }
     }

@@ -17,11 +17,23 @@ class NetworkService {
                                    responseType: T.Type,
                                    completion: @escaping (Result<T, Error>) -> Void) {
         
+        let cache = URLCache(
+            memoryCapacity: 1024 * 1024 * 512,
+            diskCapacity: 1024 * 1024 * 1024 * 100,
+            diskPath: "Cache.db"
+        )
+
+        let sessionConfiguration = URLSessionConfiguration.default
+        sessionConfiguration.urlCache = cache
+
+        let session = URLSession(configuration: sessionConfiguration)
+
+        
         var request = URLRequest(url: url)
         request.httpMethod = method.rawValue
-        request.addValue("X-Auth-Token", forHTTPHeaderField: MessagesConstant.API_TOKEN)
+        request.addValue(MessagesConstant.API_TOKEN, forHTTPHeaderField: "X-Auth-Token")
         
-        URLSession.shared.dataTask(with: request) { (data, response, error) in
+        session.dataTask(with: request) { (data, response, error) in
             guard let data = data, error == nil else {
                 completion(.failure(error!))
                 return
