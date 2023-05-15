@@ -17,14 +17,14 @@ class TeamsViewModel {
     func fetchTeams() {
         teamsList = [
             Team(id: 1, name: "Manchester United", crest: MessagesConstant.systemballImage),
-            Team(id: 2, name: "Manchester United", crest: MessagesConstant.systemballImage),
-            Team(id: 3, name: "Manchester United", crest: MessagesConstant.systemballImage),
-            Team(id: 4, name: "Manchester United", crest: MessagesConstant.systemballImage),
+            Team(id: 2, name: "Fullham FC", crest: MessagesConstant.systemballImage),
+            Team(id: 3, name: "Liverpool FC", crest: MessagesConstant.systemballImage),
+            Team(id: 4, name: "Manchester City", crest: MessagesConstant.systemballImage),
             Team(id: 5, name: "Manchester United", crest: MessagesConstant.systemballImage),
-            Team(id: 6, name: "Manchester United", crest: MessagesConstant.systemballImage),
-            Team(id: 7, name: "Manchester United", crest: MessagesConstant.systemballImage),
+            Team(id: 6, name: "Arsenal FC", crest: MessagesConstant.systemballImage),
+            Team(id: 7, name: "Chelsea FC", crest: MessagesConstant.systemballImage),
             Team(id: 8, name: "Manchester United", crest: MessagesConstant.systemballImage),
-            Team(id: 9, name: "Manchester United", crest: MessagesConstant.systemballImage),
+            Team(id: 9, name: "PSG United", crest: MessagesConstant.systemballImage),
 
         ]
         // get from db

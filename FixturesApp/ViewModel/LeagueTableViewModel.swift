@@ -27,7 +27,6 @@ class LeagueTableViewModel {
                 for tabl in data.standings[0].table {
                     self?.teams.append(tabl.team)
                 }
-//                UserDefaults.standard.set(self?.teams, forKey: "teams")
                 // move to realm
                 self?.delegate?.didUpdateData()
 
