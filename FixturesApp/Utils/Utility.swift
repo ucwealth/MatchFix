@@ -110,7 +110,8 @@ class Utility {
      * Hide bottom tab in other VCs
      * Create custom view for the navbar area
      *  Teams store
-     *
+     *  Load Images
+     *   
      **/
     
 }

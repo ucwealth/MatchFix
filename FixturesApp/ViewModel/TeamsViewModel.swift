@@ -15,13 +15,25 @@ class TeamsViewModel {
     // Use the teams from standing/table to populate here
     // Only make network call when a collection view cell is clicked
     func fetchTeams() {
+        teamsList = [
+            Team(id: 1, name: "Manchester United", crest: ""),
+            Team(id: 2, name: "Manchester United", crest: ""),
+            Team(id: 3, name: "Manchester United", crest: ""),
+            Team(id: 4, name: "Manchester United", crest: ""),
+            Team(id: 5, name: "Manchester United", crest: ""),
+            Team(id: 6, name: "Manchester United", crest: ""),
+            Team(id: 7, name: "Manchester United", crest: ""),
+            Team(id: 8, name: "Manchester United", crest: ""),
+            Team(id: 9, name: "Manchester United", crest: ""),
+
+        ]
         // get from db
-        if let teams = UserDefaults.standard.array(forKey: "teams") {
-            for team in teams as! [Team]  {
-                teamsList.append(team)
-                print("teamsList", teamsList)
-            }
-        }
+//        if let teams = UserDefaults.standard.array(forKey: "teams") {
+//            for team in teams as! [Team]  {
+//                teamsList.append(team)
+//                print("teamsList", teamsList)
+//            }
+//        }
 
     }
     
