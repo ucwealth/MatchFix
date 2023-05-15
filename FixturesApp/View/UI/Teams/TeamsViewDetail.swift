@@ -16,7 +16,7 @@ class TeamsViewDetailViewController: UIViewController, TeamsViewModelDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.addSubview(teamsDetailView)
-        view.backgroundColor = .gray
+//        view.backgroundColor = .gray
         viewModel.delegate = self
 
     }
