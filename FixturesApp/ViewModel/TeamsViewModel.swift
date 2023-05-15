@@ -16,9 +16,13 @@ class TeamsViewModel {
     // Only make network call when a collection view cell is clicked
     func fetchTeams() {
         // get from db
-        for table in tableViewModel.table ?? []  {
-            teamsList.append(table.team)
+        if let teams = UserDefaults.standard.array(forKey: "teams") {
+            for team in teams as! [Team]  {
+                teamsList.append(team)
+                print("teamsList", teamsList)
+            }
         }
+
     }
     
     func fetchSquad(teamID: Int) {

@@ -8,6 +8,7 @@ protocol LeagueTableViewModelDelegate: AnyObject {
 class LeagueTableViewModel {
     var table: [Table]?
     weak var delegate: LeagueTableViewModelDelegate?
+    var teams = [Team]()
         
     init(table: [Table]? = nil, delegate: LeagueTableViewModelDelegate? = nil) {
         self.table = table
@@ -23,6 +24,11 @@ class LeagueTableViewModel {
             switch result {
             case .success(let data):
                 self?.table = data.standings[0].table
+                for tabl in data.standings[0].table {
+                    self?.teams.append(tabl.team)
+                }
+                UserDefaults.standard.set(self?.teams, forKey: "teams")
+                // move to realm
                 self?.delegate?.didUpdateData()
 
             case .failure(let error):

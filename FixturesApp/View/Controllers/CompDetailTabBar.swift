@@ -27,7 +27,7 @@ class CompDetailTabBarController: UITabBarController {
     
     
     override func viewDidLayoutSubviews() {
-        tabBar.frame = CGRect(x: 0,y: 100, width: UIScreen.main.bounds.width,height: 70)
+        tabBar.frame = CGRect(x: 0,y: 80, width: UIScreen.main.bounds.width,height: 60)
 
     }
 
