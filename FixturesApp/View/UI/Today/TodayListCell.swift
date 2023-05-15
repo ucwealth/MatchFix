@@ -6,7 +6,6 @@ class TodayListCell: BaseTableCell {
     
     // MARK: - Setup Views
     override func setupViews() {
-//        firstVStack.backgroundColor = .systemTeal
         contentView.addSubview(containerStack, anchors: [.leading(15), .trailing(-15), .centerY(0)])
     }
 

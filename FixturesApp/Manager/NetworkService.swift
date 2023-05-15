@@ -16,18 +16,15 @@ class NetworkService {
                                    method: HTTPMethod = .get,
                                    responseType: T.Type,
                                    completion: @escaping (Result<T, Error>) -> Void) {
-        
-        let cache = URLCache(
-            memoryCapacity: 1024 * 1024 * 512,
-            diskCapacity: 1024 * 1024 * 1024 * 100,
-            diskPath: "Cache.db"
-        )
+//        let cache = URLCache(
+//            memoryCapacity: 1024 * 1024 * 512,
+//            diskCapacity: 1024 * 1024 * 1024 * 100,
+//            diskPath: "Cache.db"
+//        )
 
         let sessionConfiguration = URLSessionConfiguration.default
-        sessionConfiguration.urlCache = cache
-
+        sessionConfiguration.urlCache = URLCache.shared
         let session = URLSession(configuration: sessionConfiguration)
-
         
         var request = URLRequest(url: url)
         request.httpMethod = method.rawValue

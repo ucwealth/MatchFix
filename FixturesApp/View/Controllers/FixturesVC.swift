@@ -15,9 +15,13 @@ class FixturesVC: UIViewController {
 
 class FixturesView: BaseView {
     override func setupView() {
-        retryBtn.widthAnchor.constraint(equalToConstant: 150).isActive = true
+        retryBtn.widthAnchor.constraint(equalToConstant: 220).isActive = true
+        retryBtn.heightAnchor.constraint(equalToConstant: 80).isActive = true
+        ballImage.heightAnchor.constraint(equalToConstant: 200).isActive = true
+
+
         addSubview(containerView,
-                   anchors: [.centerX(0)])
+                   anchors: [.centerX(0), .centerY(0)])
     }
 
     let ballImage = Utility.createImage(imagename: MessagesConstant.systemballImage, imageHeight: 200)

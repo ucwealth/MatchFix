@@ -17,9 +17,6 @@ class Utility {
         label.numberOfLines = numOfLines
         label.lineBreakMode = .byWordWrapping
         label.textAlignment = textAlignment
-        
-//        label.setContentCompressionResistancePriority(.defaultLow, for: .horizontal)
-//        label.setContentHuggingPriority(.defaultLow, for: .horizontal)
         return label
     }
     
@@ -46,8 +43,7 @@ class Utility {
         let imageView = UIImageView()
         imageView.tintColor = tintColor
         imageView.contentMode = .scaleAspectFill
-        imageView.layer.cornerRadius = 5
-//        imageView.backgroundColor = .red
+        imageView.layer.cornerRadius = 10
         imageView.frame.size.width = imageWidth
         imageView.frame.size.height = imageHeight
         imageView.clipsToBounds = true
@@ -91,19 +87,11 @@ class Utility {
     
     static func getCurrentTimeDiff() {
         let dateString = "2023-05-15T19:15:00Z"
-
-        // Create a DateFormatter instance
         let dateFormatter = DateFormatter()
-
-        // Set the input format to match the string format
         dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
-
-        // Parse the string into a Date object
         if let date = dateFormatter.date(from: dateString) {
-            // Get the current date and time
             let currentDate = Date()
             
-            // Compare the given date with the current date
             if date < currentDate {
                 print("The given time is in the past")
             } else if date > currentDate {
